@@ -148,11 +148,11 @@ class StMng{
             System.out.println("Student name \t\t: "+readStudentName(id));
             boolean added = checkMarksAdded(id);
             if(added==true){
-                System.out.println("Marks alredy added");
+                System.out.println("Marks already added");
             }
             else if(added==false){
                 addMarks(id);
-                System.out.println("Marks succsessfully added. ");
+                System.out.println("Marks successfully added. ");
             }
 
             int ans = 0;
@@ -205,7 +205,7 @@ class StMng{
                 }
             }
             System.out.println(Arrays.deepToString(student));
-            System.out.println("Sucsessfully updated ! ");
+            System.out.println("Successfully updated ! ");
 
             int ans = 0;
             while(ans==0){
@@ -257,7 +257,7 @@ class StMng{
                 System.out.println();
                 System.out.println("Enter new marks");
                 addMarks(id);
-                System.out.println("Sucsessfully updated !");
+                System.out.println("Successfully updated !");
             }
 
             else if(added == false){
@@ -313,7 +313,7 @@ class StMng{
 
             int [][] tempMarks = new int [marks.length-1][2];
 
-            for(int i=0; i<tempMarks.length; i++){				// copy to tempory arry , without last value
+            for(int i=0; i<tempMarks.length; i++){				// copy to temp array , without last value
                 for(int j=0; j<tempMarks[i].length; j++){
                     tempMarks[i][0]=marks[i][0];
                     tempMarks[i][1]=marks[i][1];
@@ -327,13 +327,13 @@ class StMng{
             String tempSt[][] = new String [student.length-1][2];
 
             for(int i=0; i<tempSt.length; i++){
-                for(int j=0; j<tempSt[i].length; j++){ 			// copy to tempory arry , without last value
+                for(int j=0; j<tempSt[i].length; j++){ 			// copy to temp array , without last value
                     tempSt[i][0]=student[i][0];
                     tempSt[i][1]=student[i][1];
                 }
             }
             student = tempSt;
-            System.out.print("Succsessfully deleted. ");
+            System.out.print("Successfully deleted. ");
 
             int ans = 0;
             while(ans==0){
@@ -561,7 +561,8 @@ class StMng{
             all[i][4]=0;	// rank
         }
 
-        System.out.println(Arrays.deepToString(all));
+        //System.out.println(Arrays.deepToString(all));
+        
         for(int i=0; i<all.length-1; i++){
             for(int j=0; j<all.length-1; j++){
                 if(all[j][a]<all[j+1][a]){   // According to columns a= 1-prf 2-dbms 3-total // Descending order
@@ -591,7 +592,7 @@ class StMng{
                 all[i][4]= r++;
             }
         }
-        System.out.println(Arrays.deepToString(all));
+       // System.out.println(Arrays.deepToString(all));
     }
 
     public static String givenIndexSimilerValue(String index, String[][] arr){
